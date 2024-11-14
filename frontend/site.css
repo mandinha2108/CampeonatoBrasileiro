@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+*
+{
+  padding:0;
+  margin:0;
+  border:0;
+  box-sizing:border-box;
+}
+
+body
+{
+  background-color:#d3d9dc;
+  font-family: "Fira Sans", sans-serif;
+  display:flex;
+  flex-direction:column;
+}
+
+img
+{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  vertical-align:middle;
+}
+
+header
+{
+  width:100%;
+  background-color:#212675;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+header .logo
+{
+  width:200px;
+  color: #c8fe08;
+}
+
+header span
+{
+  font-size:24pt;
+  padding:10px 0px;
+}
+
+main
+{
+  width:100%;
+  height:auto;
+  flex-grow:1;
+  padding:30px 0px;
+}
+
+footer
+{
+  width:100%;
+  background-color:#212675;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  padding:100px 0px;
+  align-items:center;
+}
+
+footer .logo
+{
+  width:100px;
+  color:#e4ff83;
+}
+
+footer span
+{
+  padding:15px 0px;
+}
+
+.wrapper{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  align-items:center;
+}
+
+nav
+{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:20px 0px;
+  margin:0 auto;
+}
+
+nav ul
+{
+  list-style:none;
+  display:flex;
+  gap:20px;
+  margin:0;
+  padding:0;
+}
+
+nav ul li a {
+  color:white;
+  text-decoration:none;
+  font-weight:400;
+  transition:0.5s;
+}
+
+nav ul li a:hover {
+  color:#c8fe08;
+  transition:0.3s;
+}
+
+.teams-grid
+{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.team-card {
+  background-color: #e6f0f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.team-card img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.team-name {
+  font-weight: 600;
+  color: #2f36a1; /* Mid-tone blue para os nomes dos times */
+}
+
+
