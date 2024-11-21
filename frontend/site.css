@@ -8,12 +8,13 @@
   box-sizing:border-box;
 }
 
-body
-{
-  background-color:#d3d9dc;
+body {
+  background-color: #d3d9dc;
   font-family: "Fira Sans", sans-serif;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* O corpo ocupará sempre a altura total da tela */
+  margin: 0; /* Remove margens padrão */
 }
 
 img
@@ -47,12 +48,24 @@ header span
   padding:10px 0px;
 }
 
-main
-{
-  width:100%;
-  height:auto;
-  flex-grow:1;
-  padding:30px 0px;
+/* Expande o main para ocupar o espaço restante */
+main {
+  flex-grow: 1; /* Faz o main expandir para preencher o espaço restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Adiciona algum espaçamento interno */
+  width: 100%;
+}
+
+/* Para centralizar e ajustar o conteúdo do resumo */
+.wrapper {
+  flex-grow: 1; /* Permite que o wrapper também cresça, caso necessário */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 footer
@@ -75,15 +88,6 @@ footer .logo
 footer span
 {
   padding:15px 0px;
-}
-
-.wrapper{
-  display:flex;
-  flex-direction:column;
-  width:100%;
-  max-width:1200px;
-  margin:0 auto;
-  align-items:center;
 }
 
 nav
@@ -130,17 +134,69 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Coloca o nome abaixo do emblema */
+  align-items: center;
 }
 
 .team-card img {
   width: 120px;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaço entre o emblema e o nome */
 }
 
 .team-name {
   font-weight: 600;
-  color: #2f36a1; /* Mid-tone blue para os nomes dos times */
+  color: #2f36a1; /* Azul médio */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.team-name:hover {
+  color: #212675; /* Azul escuro ao passar o mouse */
+}
+
+.team-details {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.team-details img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.team-details h1 {
+  font-size: 24px;
+  color: #2f36a1;
+  text-transform: uppercase;
+  padding: 15px 0px;
+}
+
+.team-details p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.back-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #212675; /* Azul escuro */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+  background-color: #c8fe08; /* Verde fluorescente */
+  color: #212675; /* Texto azul escuro no hover */
 }
 
 

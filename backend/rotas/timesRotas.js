@@ -1,8 +1,9 @@
 const express = require('express');
 const roteador = express.Router();
-const timesControlador = require('../controladores/timesControlador');
+const timesControlador = require('../controladores/timesControladores');
 
-// Rota para listar todos os times
 roteador.get('/times', timesControlador.obterTodosTimes);
+
+roteador.get('/times/:id', timesControlador.obterResumoTime);
 
 module.exports = roteador;
