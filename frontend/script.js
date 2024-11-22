@@ -52,6 +52,7 @@ async function carregarResumoTime() {
     const resumo = await resposta.json();
 
     const container = document.getElementById('team-summary');
+    var pontos = resumo.total_vitorias * 3 + resumo.total_empates;
 
     // Renderiza os dados do time
     container.innerHTML = `
@@ -59,6 +60,7 @@ async function carregarResumoTime() {
         <img src="img/${timeId}.png" alt="Emblema do ${resumo.time_nome}">
         <h1>${resumo.time_nome}</h1>
         <p>Total de Partidas: ${resumo.total_partidas}</p>
+        <p>Total de Pontos: ${pontos}</p>
         <p>Total de Vitórias: ${resumo.total_vitorias}</p>
         <p>Total de Empates: ${resumo.total_empates}</p>
         <p>Total de Derrotas: ${resumo.total_derrotas}</p>
